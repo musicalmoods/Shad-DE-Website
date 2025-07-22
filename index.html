@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="musicalmoods">
+    <meta name="description" content="TapTrack: Your gateway to rewards for using public transit in Canada.">
+    <title>TapTrack - Rewarding Sustainable Travel</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" href="assets/TapTrackLogo.png">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-green': '#859377',
+                        'brand-blue': '#193887',
+                        'brand-gray': '#4A5568',
+                        'brand-light-gray': '#F7FAFC',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-light-gray font-sans text-brand-gray antialiased">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="#home" class="flex items-center space-x-3">
+                    <img src="assets/TapTrackLogo.png" alt="TapTrack Logo" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-brand-blue">TapTrack</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="#home"
+                        class="px-4 py-2 text-brand-gray hover:text-brand-blue transition duration-300">Home</a>
+                    <a href="#rewards"
+                        class="px-4 py-2 text-brand-gray hover:text-brand-blue transition duration-300">Rewards</a>
+                    <a href="#about"
+                        class="px-4 py-2 text-brand-gray hover:text-brand-blue transition duration-300">About</a>
+                    <a href="#contact"
+                        class="px-4 py-2 text-brand-gray hover:text-brand-blue transition duration-300">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-brand-gray hover:text-brand-blue focus:outline-none">
+                        <i class="fa fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#home" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded">Home</a>
+                <a href="#rewards" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded">Rewards</a>
+                <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded">About</a>
+                <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="relative text-center py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-blue mb-4">Travel Smarter. Get Rewarded.</h1>
+                <p class="text-lg md:text-xl text-brand-gray max-w-3xl mx-auto mb-8">Join TapTrack and turn your daily
+                    commute into exciting rewards. We're inspiring Canada's youth to choose sustainable and affordable
+                    public transit.</p>
+                <a href="#rewards"
+                    class="bg-brand-blue text-white font-bold py-3 px-8 rounded-full hover:bg-blue-800 transition duration-300 transform hover:scale-105">See
+                    The Rewards</a>
+            </div>
+        </section>
+
+        <section id="rewards" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Innovative Rewards System</h2>
+                    <p class="text-lg text-brand-gray mt-2">We gamify your transit experience. The more you travel, the
+                        more you earn.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <div class="text-4xl text-brand-green mb-4"><i class="fa fa-map-signs"></i></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Zone Bonus</h3>
+                        <p class="text-brand-gray">Earn 5 points for every transit zone you travel through. Go farther,
+                            earn more!</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <div class="text-4xl text-brand-green mb-4"><i class="fa fa-briefcase"></i></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Commuter Bonus</h3>
+                        <p class="text-brand-gray">Get an extra 3 points per zone for using transit during your set work
+                            or school commute times.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <div class="text-4xl text-brand-green mb-4"><i class="fa fa-calendar-week"></i></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Weekend Warrior</h3>
+                        <p class="text-brand-gray">Explore your city on the weekend and get 5 bonus points for any trip.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <div class="text-4xl text-brand-green mb-4"><i class="fa fa-fire"></i></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Streak Bonus</h3>
+                        <p class="text-brand-gray">Use transit every weekday (Mon-Fri) and get a massive 30-point bonus
+                            at the end of the week!</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <p class="text-lg text-brand-gray">Redeem points for discounts at local stores or for collectible,
+                        limited-edition RFID tags!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Mission</h2>
+                    <p class="text-lg text-brand-gray mt-2">Tackling transportation challenges for a sustainable future.
+                    </p>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-3">The Problem</h3>
+                        <p class="text-brand-gray leading-relaxed">Youth in Canada face significant barriers to using
+                            public transportation. High costs, unreliable service, and a general stigma lead many to
+                            choose car-centric options. This contributes to financial strain, environmental damage, and
+                            social isolation in sprawling suburban areas where services are far apart.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-3">Our Solution</h3>
+                        <p class="text-brand-gray leading-relaxed mb-4">To combat this, we've designed a unique and
+                            powerful incentive system. TapTrack rewards you for using public transit, turning every trip
+                            into an opportunity. By earning points, you can redeem rewards ranging from discounts at
+                            local businesses strengthening our communities, to collectible, special-edition RFID tags
+                            shaped like transit vehicles.</p>
+                        <p class="text-brand-gray leading-relaxed">This system gamifies transit, making it fun and
+                            engaging. The increased ridership generates revenue that can be reinvested into the transit
+                            system, funding new routes and service improvements. It's a cycle of positive change, making
+                            transit the smarter, more appealing choice for everyone.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-3">Potential Impact</h3>
+                        <p class="text-brand-gray leading-relaxed">Our goal is to shift the primary mode of youth
+                            transportation from cars to public transit. This change fosters more sustainable habits,
+                            reduces carbon emissions, and offers a cost-effective alternative that eases financial
+                            burdens. By increasing demand, we can help build a more robust, reliable, and accessible
+                            public transit network for all Canadians, connecting communities and creating a greener
+                            future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Get In Touch</h2>
+                    <p class="text-lg text-brand-gray mt-2">Have questions? We'd love to hear from you.</p>
+                </div>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-brand-gray font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-brand-gray font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green"
+                                required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-brand-gray font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green"
+                                required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" onclick="this.form.reset();"
+                                class="bg-brand-green text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-gray text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <a href="#home" class="flex items-center justify-center space-x-3 mb-4">
+                <img src="assets/TapTrackLogo.png" alt="TapTrack Logo" class="h-10 w-auto">
+                <span class="text-xl font-bold">TapTrack</span>
+            </a>
+            <p class="mb-4">&copy; 2025 TapTrack. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="hover:text-gray-300 transition duration-300"><i
+                        class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-gray-300 transition duration-300"><i
+                        class="fab fa-facebook-f fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+
+</html>
